@@ -1,1 +1,361 @@
-{}
+{
+  "totalMark": 23,
+  "wsosSections": {
+    "1": "Work organization and management",
+    "2": "Communication and interpersonal skills",
+    "3": "Design implementation",
+    "4": "Front-end development",
+    "5": "Back-end development"
+  },
+  "subCriterions": [
+    {
+      "name": "Code quality",
+      "aspects": [
+        {
+          "type": "judgement",
+          "description": "Source code quality",
+          "maxMark": 1,
+          "wsosSection": 1,
+          "judgementScoreDescription": [
+            "source code is not saved or contains only default files",
+            "code is readable and understandable, but insufficiently structured or optimized",
+            "repeated logic is extracted into separate methods/classes, and framework features are used correctly",
+            "code structure allows logic changes without rewriting large portions of code; best practices are applied"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Registration, Authorization and Profile Editing",
+      "aspects": [
+        {
+          "type": "measurement",
+          "description": "Registration form contains email, phone, and password. All fields are required. Client-side validation is implemented.",
+          "maxMark": 1,
+          "wsosSection": 4,
+          "extraDescription": "Deduct 0.25 for each missing field or incorrect validation",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "The user is automatically logged in after successful registration",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "The user can sign in with email or phone and password; a token is issued and stored on the client",
+          "maxMark": 0.5,
+          "wsosSection": 4,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "The token is sent in the Authorization header with every request",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "The user can change email, phone, and password with validation (old/new/repeat)",
+          "maxMark": 1,
+          "wsosSection": 4,
+          "extraDescription": "Deduct 0.25 for each missing field or incorrect validation",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "The user can sign out; the token is removed",
+          "maxMark": 0.5,
+          "wsosSection": 4,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Ads Management",
+      "aspects": [
+        {
+          "type": "measurement",
+          "description": "The user can create an advert with required fields (title, text, price, category, images). Default status is draft",
+          "maxMark": 1,
+          "wsosSection": 4,
+          "extraDescription": "Deduct 0.25 for each missing field or incorrect validation",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "The user can submit an advert for moderation (status = moderation)",
+          "maxMark": 0.5,
+          "wsosSection": 4,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "The user can edit an advert only in draft status",
+          "maxMark": 0.5,
+          "wsosSection": 4,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "The user can archive an advert from draft status",
+          "maxMark": 0.5,
+          "wsosSection": 4,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "The user can delete an advert only in draft or archived status",
+          "maxMark": 0.5,
+          "wsosSection": 4,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "The My Adverts page shows a list of the user's adverts",
+          "maxMark": 0.75,
+          "wsosSection": 4,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Adverts can be filtered by status",
+          "maxMark": 0.5,
+          "wsosSection": 4,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Main Page",
+      "aspects": [
+        {
+          "type": "measurement",
+          "description": "All published adverts are displayed with title, short description, price, category, and date",
+          "maxMark": 1,
+          "wsosSection": 4,
+          "extraDescription": "Deduct 0.25 for each missing field",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Filtering by category, price range, and keywords is implemented",
+          "maxMark": 0.75,
+          "wsosSection": 4,
+          "extraDescription": "Deduct 0.25 for each missing field",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "judgement",
+          "description": "Home page – Overall design",
+          "maxMark": 1,
+          "wsosSection": 3,
+          "judgementScoreDescription": [
+            "design does not fit the topic or looks poor",
+            "design fits the topic but looks simplistic",
+            "design fits the topic and looks good, but there is room for improvement",
+            "design fits the topic well and is excellent"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Single Ad Page",
+      "aspects": [
+        {
+          "type": "measurement",
+          "description": "The advert page displays title, description, price, category, images, date, and author",
+          "maxMark": 1,
+          "wsosSection": 4,
+          "extraDescription": "Deduct 0.25 for each missing field",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Images are displayed in a carousel (main image + thumbnails)",
+          "maxMark": 1,
+          "wsosSection": 4,
+          "extraDescription": "Main image centered; thumbnails displayed below the main image",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Show phone button: number is initially hidden (first 4 digits visible); full number appears on click",
+          "maxMark": 0.5,
+          "wsosSection": 4,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "A button for purchasing paid services is displayed next to the advert",
+          "maxMark": 0.5,
+          "wsosSection": 4,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "A list of purchased services is displayed together with their expiration dates",
+          "maxMark": 0.75,
+          "wsosSection": 4,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "judgement",
+          "description": "Advert details page – Overall design",
+          "maxMark": 1,
+          "wsosSection": 3,
+          "judgementScoreDescription": [
+            "design does not fit the topic or looks poor",
+            "design fits the topic but looks simplistic",
+            "design fits the topic and looks good, but there is room for improvement",
+            "design fits the topic well and is excellent"
+          ]
+        },
+        {
+          "type": "judgement",
+          "description": "Carousel functionality on the advert details page",
+          "maxMark": 1,
+          "wsosSection": 4,
+          "judgementScoreDescription": [
+            "does not meet carousel standards",
+            "meets standards but looks simplistic",
+            "meets standards well",
+            "excellent"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Purchase Page For Advantage Services",
+      "aspects": [
+        {
+          "type": "measurement",
+          "description": "An interface for purchasing the VIP service for 7 days is available when it is inactive",
+          "maxMark": 0.5,
+          "wsosSection": 4,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "An interface for purchasing the TOP service for 3 days is available when it is inactive",
+          "maxMark": 0.5,
+          "wsosSection": 4,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Extension is only possible after the current period ends",
+          "maxMark": 0.5,
+          "wsosSection": 4,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "judgement",
+          "description": "Interface design and modularity",
+          "maxMark": 1,
+          "wsosSection": 3,
+          "judgementScoreDescription": [
+            "low quality",
+            "works but looks simplistic",
+            "good but can be improved",
+            "excellent modular design"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Layout & UX",
+      "aspects": [
+        {
+          "type": "measurement",
+          "description": "Responsive design for different devices",
+          "maxMark": 1,
+          "wsosSection": 3,
+          "extraDescription": "Deduct 0.25 for each error",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Client-side routing is implemented for navigation",
+          "maxMark": 0.75,
+          "wsosSection": 4,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Error handling for invalid data, access denied, and server errors with user feedback (spinners, notifications)",
+          "maxMark": 0.75,
+          "wsosSection": 4,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "judgement",
+          "description": "Animations and user experience (UX) polish",
+          "maxMark": 0.75,
+          "wsosSection": 3,
+          "judgementScoreDescription": [
+            "no animations",
+            "very simplistic",
+            "good but can be improved",
+            "excellent and consistent with the design"
+          ]
+        }
+      ]
+    }
+  ]
+}
