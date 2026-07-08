@@ -332,7 +332,7 @@ paths:
               $ref: "#/components/schemas/AdvertUpdateRequest"
       responses:
         "200":
-          description: Updated advert (automatically moved to moderation status if edited by a non-moderator user)
+          description: Updated advert (automatically moved to moderation status if edited by the author)
           content:
             application/json:
               schema:
@@ -344,7 +344,7 @@ paths:
               schema:
                 $ref: "#/components/schemas/UnauthorizedErrorResponse"
         "403":
-          description: Only advert's author or moderator can execute this request. Simple user caen edit only in draft status.
+          description: Only advert's author or moderator can execute this request. The author can edit only in draft status.
           content:
             application/json:
               schema:
